@@ -1,9 +1,9 @@
-C:\Users\José\Desktop\CVDS\CVDS-2020-2\LABS\LAB 7\Lab7\src\main\java\edu\eci\cvds\sampleprj\jdbc\example\JDBCExample.java
-C:\Users\José\Desktop\CVDS\CVDS-2020-2\LABS\LAB 7\Lab7\src\main\java\edu\eci\cvds\samples\entities\Item.java
-C:\Users\José\Desktop\CVDS\CVDS-2020-2\LABS\LAB 7\Lab7\src\main\java\edu\eci\cvds\samples\entities\ItemRentado.java
-C:\Users\José\Desktop\CVDS\CVDS-2020-2\LABS\LAB 7\Lab7\src\main\java\edu\eci\cvds\samples\services\client\MyBatisExample.java
-C:\Users\José\Desktop\CVDS\CVDS-2020-2\LABS\LAB 7\Lab7\src\main\java\edu\eci\cvds\sampleprj\dao\mybatis\mappers\ClienteMapper.java
-C:\Users\José\Desktop\CVDS\CVDS-2020-2\LABS\LAB 7\Lab7\src\main\java\edu\eci\cvds\samples\entities\TipoItem.java
-C:\Users\José\Desktop\CVDS\CVDS-2020-2\LABS\LAB 7\Lab7\src\main\java\edu\eci\cvds\sampleprj\dao\mybatis\mappers\TipoItemMapper.java
-C:\Users\José\Desktop\CVDS\CVDS-2020-2\LABS\LAB 7\Lab7\src\main\java\edu\eci\cvds\sampleprj\dao\mybatis\mappers\ItemMapper.java
-C:\Users\José\Desktop\CVDS\CVDS-2020-2\LABS\LAB 7\Lab7\src\main\java\edu\eci\cvds\samples\entities\Cliente.java
+C:\Users\juank\OneDrive\Documents\CVDS\Lab7\Lab7\src\main\java\edu\eci\cvds\sampleprj\dao\mybatis\mappers\ClienteMapper.java
+C:\Users\juank\OneDrive\Documents\CVDS\Lab7\Lab7\src\main\java\edu\eci\cvds\sampleprj\dao\mybatis\mappers\TipoItemMapper.java
+C:\Users\juank\OneDrive\Documents\CVDS\Lab7\Lab7\src\main\java\edu\eci\cvds\samples\entities\Item.java
+C:\Users\juank\OneDrive\Documents\CVDS\Lab7\Lab7\src\main\java\edu\eci\cvds\samples\entities\ItemRentado.java
+C:\Users\juank\OneDrive\Documents\CVDS\Lab7\Lab7\src\main\java\edu\eci\cvds\sampleprj\dao\mybatis\mappers\ItemMapper.java
+C:\Users\juank\OneDrive\Documents\CVDS\Lab7\Lab7\src\main\java\edu\eci\cvds\sampleprj\jdbc\example\JDBCExample.java
+C:\Users\juank\OneDrive\Documents\CVDS\Lab7\Lab7\src\main\java\edu\eci\cvds\samples\entities\TipoItem.java
+C:\Users\juank\OneDrive\Documents\CVDS\Lab7\Lab7\src\main\java\edu\eci\cvds\samples\entities\Cliente.java
+C:\Users\juank\OneDrive\Documents\CVDS\Lab7\Lab7\src\main\java\edu\eci\cvds\samples\services\client\MyBatisExample.java

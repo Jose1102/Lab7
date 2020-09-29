@@ -33,7 +33,7 @@ import java.util.logging.Logger;
 public class JDBCExample {
 	private static PreparedStatement updateOrden;
 	private static PreparedStatement updatePedido;
-	private static PreparedStatement registrarOrden = null;
+	private static PreparedStatement registrarOrden;
 	private static ResultSet salidaOrden;
 	private static ResultSet salidaPedido = null;
     
@@ -48,8 +48,9 @@ public class JDBCExample {
             Connection con=DriverManager.getConnection(url,user,pwd);
             con.setAutoCommit(false);
                  
-            
-            System.out.println("Valor total pedido 1:"+valorTotalPedido(con, 1));
+            List<String> variable = nombresProductosPedido(con, 1);
+            System.out.println("Valor nombre: " + variable.get(0));
+            //System.out.println("Valor total pedido 1:"+valorTotalPedido(con, 2));
             
             List<String> prodsPedido=nombresProductosPedido(con, 1);
             
@@ -62,8 +63,8 @@ public class JDBCExample {
             System.out.println("-----------------------");
             
             
-            int suCodigoECI=20134423;
-            registrarNuevoProducto(con, suCodigoECI, "SU NOMBRE", 99999999);            
+            int suCodigoECI=2159970;
+            //registrarNuevoProducto(con, suCodigoECI, "Juan Carlos A", 99999999);            
             con.commit();
                         
             
@@ -89,11 +90,12 @@ public class JDBCExample {
         //Asignar parámetros
         //usar 'execute'
 		//Crear prepared statement
-		String updateString = "INSERT INTO ORD_PRODUCTOS(codigo, nombre, precio) VALUES (?,?,?);";
+		String updateString = "INSERT INTO ORD_PRODUCTOS VALUES (?,?,?);";
 		registrarOrden = con.prepareStatement(updateString);
 		registrarOrden.setInt(1,codigo);
 		registrarOrden.setString(2,nombre);
 		registrarOrden.setInt(3,precio);		
+		registrarOrden.executeUpdate();
         con.commit();
         
     }
