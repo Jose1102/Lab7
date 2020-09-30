@@ -20,11 +20,17 @@ package edu.eci.cvds.samples.services.client;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Date;
 import java.sql.SQLException;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+import edu.eci.cvds.sampleprj.dao.mybatis.mappers.ClienteMapper;
+import edu.eci.cvds.sampleprj.dao.mybatis.mappers.ItemMapper;
+import edu.eci.cvds.samples.entities.Item;
+import edu.eci.cvds.samples.entities.TipoItem;
 
 /**
  *
@@ -58,16 +64,37 @@ public class MyBatisExample {
      * @throws SQLException 
      */
     public static void main(String args[]) throws SQLException {
+    	
         SqlSessionFactory sessionfact = getSqlSessionFactory();
 
         SqlSession sqlss = sessionfact.openSession();
 
         
         //Crear el mapper y usarlo: 
-        //ClienteMapper cm=sqlss.getMapper(ClienteMapper.class)
+        ClienteMapper cm= sqlss.getMapper(ClienteMapper.class);
         //cm...
-        
-        
+        System.out.println("Consulta Clientes");
+        System.out.println(cm.consultarClientes());
+        System.out.println("----------------------");
+        System.out.println("----------------------");
+        System.out.println("Consulta cliente -706");
+        System.out.println(cm.consultarCliente(-706));
+        System.out.println("----------------------");
+        System.out.println("----------------------");
+        System.out.println("agregar Item a Cliente");
+        Date fi = new Date(113,4,5);
+        Date ff = new Date(113,5,5);
+        cm.agregarItemRentadoACliente(-706, 4, fi, ff);
+        System.out.println(cm.consultarCliente(-706));
+        System.out.println("----------------------");
+        System.out.println("----------------------");
+        System.out.println("agregar Item");
+        ItemMapper im = sqlss.getMapper(ItemMapper.class);
+        TipoItem tip = new TipoItem(2, "Accion");
+        Date fecha = new Date(116,6,6);
+        //Item itemNuevo = new Item(tip, 2122, "BicicletaNo2", "es un medio de transporte", fecha, 100, "Diario", "Accion");
+        //im.insertarItem(itemNuevo);
+        System.out.println(im.consultarItem(2122));
         
         sqlss.commit();
         
